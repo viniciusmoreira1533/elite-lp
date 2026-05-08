@@ -1,0 +1,12 @@
+{
+  "name": "elite-lp",
+  "version": "1.0.0",
+  "description": "Elite Proteção Patrimonial Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
