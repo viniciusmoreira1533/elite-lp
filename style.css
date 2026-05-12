@@ -184,6 +184,17 @@ body {
   border-color: var(--white);
 }
 
+.btn-no-interaction {
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.btn-no-interaction:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
 /* ─── HERO ─── */
 .hero {
   min-height: 100vh;
