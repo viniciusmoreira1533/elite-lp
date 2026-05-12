@@ -67,6 +67,13 @@
       e.preventDefault();
       modalOverlay.classList.add('active');
       document.body.style.overflow = 'hidden';
+      
+      // GTM Event: Form Open
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'form_open',
+        'form_id': 'modal_orcamento'
+      });
     });
   });
 
@@ -159,6 +166,13 @@
       // WhatsApp Redirect
       const message = `Olá! Meu nome é ${nome.trim()} e quero um orçamento personalizado de proteção patrimonial para meu imóvel.`;
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      
+      // GTM Event: Lead Sent
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'lead_submission_success',
+        'form_id': 'modal_orcamento'
+      });
       
       setTimeout(() => {
         window.location.href = waUrl;
